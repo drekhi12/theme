@@ -1,0 +1,258 @@
+*** Changelog - Lifeline NGO WordPress Theme ***
+
+Version 3.0.3 (02-02-2015)
+--------------------------
+
+Fixed - Enqueue.php bug fixed 
+
+Version 3.0.2 (01-29-2015)
+--------------------------
+
+Fixed - Theme Options Upload Big Fixed 
+Fixed - Image Carousel Link Broken Bug Fixed
+Updated - Visual Composer Bug Fixed
+
+Version 3.0.1 (01-27-2015)
+--------------------------
+
+Fixed - Jquery Uploading Bug Fixed
+
+Version 3.0 (01-15-2015)
+------------------------
+
+New - BuddyPress Support Given
+New - Gravity Form Support Given
+New - Contact Form 7 Support Given
+New - Home Page Organization 2015 Added
+Updated - Visual Composer
+Updated - Layer Slider
+Updated - Revolution Slider
+Updated - WooCommerce Plugin
+Fixed - Demo Problem Solved (Making it Compatible with Wordpress 4.1 and Above)
+Fixed - Image Upload Bug Fixed in Theme Options
+Fixed - Boxed Version Problem Solved
+
+Version 2.9.6 (12-20-2014)
+--------------------------
+
+Updated - Revolution Slider 
+Updated - Visual Composer Updated
+Fixed - Little Php Bugs Fixed
+
+Version 2.9.5 (11-29-2014)
+--------------------------
+
+Fixed - Fix Megamenu Bug
+Fixed - Paypal Recurring Payment System Bug
+Fixed - Fix Some Style Related Bugs
+New - Make PDF Report of Donations
+
+Version 2.9.4 (11-03-2014)
+--------------------------
+
+Fixed - Recurring Payment Bug Fixed
+
+
+Version 2.9.3 (10-21-2014)
+--------------------------
+
+Added - Twitter Option in Theme Options and Display on Contact Page and Header with Social Icon
+Added - Filter on Search Box
+Updated - jQuery File
+Updated - Woocommerce Plugin
+Updated - Donation Box Popup Box in "Our causes with Donation" Shortcode
+Updated - Donation Box Popup Box in "Donation shortcode" Shortcode
+Updated - Donation Box Popup Box in "Donation Sidebox Shortcode" Shortcode
+Updated - Donation Box Popup Box in "Donate Us (widgets)" Shortcodes
+Fixed - Megamenu Bug
+
+
+
+Version 2.9.2 (10-09-2014)
+--------------------------
+
+- Updated - Layer Slider New Version Given
+- Updated - .mo / .po File Updated
+- Fixed - Donation Price Box Issue Fixed
+
+Version 2.9.1 (09-23-2014)
+--------------------------
+
+- Fixed - Causes Single Page Donation Amount Bug Fixed
+- Fixed - Codebird.php Small Bug Fixed
+
+Version 2.9 (09-19-2014)
+------------------------
+
+- New - 2 New Cuases Listing Page Templates (Fancy Causes 1 and 2)
+- New - Recent News Listing Page Template
+- New - Our Mission Listing Page Template 
+- New - Mega Menu Support
+- New - Our Causes 2 Fancy ShortCode Added
+
+- Fixed - Mega Menu Bug Fixed
+- Fixed - SEO Meta File Bug Fixed
+- Fixed - Heading Styles Bug Fixed
+- Fixed - CSS Style Bug Fixed
+
+Version 2.8 (09-16-2014)
+------------------------
+
+- New - Creative Recent News Shortcode Added
+- New - Featured Posts Shortcode Added
+- New - Post Video Carousel Shortcode Added
+- New - Blockquote Carousel Shortcode Added
+- New - Latest News Carousel Shortcode Added
+- New - Fancy Causes Shortcode Added
+- New - Header 5 with Social Icons and Donate Button
+- New - Header 6 with Event Counter
+- New - WPML Compatible Search 
+
+- Fixed - Menu Issue Fixed 
+- Updated - Fully Compatible with Wordpress 4.0+
+
+Version 2.7 (09-11-2014)
+------------------------
+
+- New - Creative Recent News Shortcode Added
+- New - Featured Posts Shortcode Added
+- New - Post Video Carousel Shortcode Added
+- New - Blockquote Carousel Shortcode Added
+- New - Latest News Carousel Shortcode Added
+- New - Fancy Causes Shortcode Added
+- New - Layer Slider Added Free
+- New - Webinane One Click Importer Given
+- New - Complete WPML Support Given
+
+Version 2.6.2 (09-07-2014)
+--------------------------
+
+- fixed - Small bbPress Bug Fixed
+- updated - Revolution Slider Updated
+- updated - WooCommerce Updated
+- updated - Visual Composer Updated
+
+
+Version 2.6.1 (09-05-2014)
+--------------------------
+
+- fixed - Archive and Category Page Options added in Theme Options
+- fixed - Category Widget Styling Issue Resolved
+- fixed - bbPress Profile Page Bug Fixed
+- fixed - Other Known Bugs Fixed
+ 
+
+Version 2.6 (08-23-2014)
+--------------------------
+
+- fixed - Visual Composer New Version Given
+- fixed - Slider Revolution New Version Given 
+- New - New Home Page Added
+- New - New Home Page 2 Added
+- New - Statistics Short Code Added
+- New - Carousel For Header Added
+- New - New "Recent News" Magazine Style Short Code Added
+- New - All Short Codes Structure Improved to Show Them in Parallax
+- New - New Heading Style Given 
+- New - Causes Slider Added
+- New - Services Short Code Added
+- New - Features Post Short Code Added
+
+Version 2.5 (08-05-2014)
+--------------------------
+
+- fixed - Visual Composer New Version Given
+- fixed - Top Bar Options Not Visible
+- fixed - Theme Options Search Result Sidebar Option Given
+- fixed - Single Product Page Title Problem Solved
+- fixed - Page With Sidebar Content Issue Resolved
+- fixed - Any Section Can Be Changed to Parallax 
+- fixed - Header Image Default Setting Problem Resolved
+- fixed - Category and Author Page Title Bug Resolved
+
+Version 2.4 (07-11-2014)
+--------------------------
+
+- fixed - Body background issue resolved 
+- fixed - Slider issue resolved
+- fixed - RTL CSS bug resolved
+- fixed - Upcoming Events timer issue resolved
+- fixed - Testimonial Shortcode issue resolved
+- fixed - Cause Hover issue resolved
+- New - Recent News shortcode updated with more functionality
+
+Version 2.3 (06-06-2014)
+--------------------------
+
+- User Visit Counter Bug Resolved
+- Donation Setting in Widgets
+- Added Featured Image Functionality in Page
+- New Feature added To Change Price and Time of Donation
+- Recent Event Widget in Sidebar Corrected
+- New Revolution Slider and Visual Composer Given
+- Some Styles Improved Through CSS
+
+Version 2.1 + 2.2 (05-19-2014)
+--------------------------
+
+- Two ShortCodes Bugs Removed
+- Responsive Styling Improved
+- New Version of Visual Composer
+- Gallery Single Page Styling Improved
+- Gallery Category Page Bug Removed
+
+
+Version 2.0 (05-19-2014)
+--------------------------
+
+- BBPress Support Given
+- All Known Bugs Removed
+- File Size Reduced to Make it Easily Installable
+- New Version of Visual Composer and Revolution Slider included
+- Design Graphics Improved to Make It More Appealing
+
+Version 1.0.2 (04-27-2014)
+--------------------------
+
+1.Update the Version of Visual Composer
+Change lifeline/framework/library/tgm-plugin-activation/plugins/js_composer.zip
+
+2. Solved Custom CSS inclusion problem through Theme Options so updated
+lifeline/framework/helpers/enqueue.php
+
+3. Solved Sidebar issue of Our Project Single Custom Post
+changed lifeline/single-dict_project.php
+
+
+Version 1.0.1 (03-11-2014)
+--------------------------
+
+Carousel On Scroll Stopped in Our Causes and Other Widgets
+
+For this change go to lifeline/framework/helpers/shortcodes.php 
+in this file search the following function 
+"mousewheel:true"
+and change it to 
+"mousewheel:false"
+
+The second change was done in 
+lifeline/css/style1.css
+lifeline/css/style2.css
+lifeline/css/style3.css
+
+If You have an issue with the Our causes carousel images in Safari , you can solve it by just making a simple change in the css, find the class name ".causes-image img" make the height property "auto" in this way:
+
+.causes-image img{
+ width:100%;
+ height:auto;
+
+ -webkit-border-radius:3px;
+ -moz-border-radius:3px;
+ -ms-border-radius:3px;
+ -0-border-radius:3px;
+ border-radius:3px;
+}
+-------------------------
+03-11-2015 - version 1.0
+-------------------------
+	* First release!

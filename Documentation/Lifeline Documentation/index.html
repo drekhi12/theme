@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" />
+<script src="jquery-1.7.2.min.js"></script>
+<script>
+$(document).ready(function() {
+  function filterPath(string) {
+  return string
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
+  }
+  var locationPath = filterPath(location.pathname);
+  var scrollElem = scrollableElement('html', 'body');
+ 
+  $('a[href*=#]').each(function() {
+    var thisPath = filterPath(this.pathname) || locationPath;
+    if (  locationPath == thisPath
+    && (location.hostname == this.hostname || !this.hostname)
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash), target = this.hash;
+      if (target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function(event) {
+          event.preventDefault();
+          $(scrollElem).animate({scrollTop: targetOffset}, 800, function() {
+            location.hash = target;
+          });
+        });
+      }
+    }
+  });
+ 
+  // use the first element that is "scrollable"
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
+          return el;
+        }
+      }
+    }
+    return [];
+  }
+ 
+ 
+$(function() {
+    $('#accordion .content').hide();
+    $('#accordion h2:first').addClass('active').next().slideDown('slow');
+    $('#accordion h2').click(function() {
+        if($(this).next().is(':hidden')) {
+            $('#accordion h2').removeClass('active').next().slideUp('slow');
+            $(this).toggleClass('active').next().slideDown('slow');
+        }
+    });
+});
+
+});
+
+</script>
+
+<script>
+
+
+</script>
+<title>Documentation</title>
+</head>
+
+<body>
+    <div class="left-side-menu">
+		<a href="http://themeforest.net/user/webinane/portfolio?ref=webinane" target="_blank" title=""><img src="images/webinane-logo.png" alt="logo" /></a>
+    	<ul>
+			<li><a href="#block1" title="">INTRODUCTION</a></li>
+			<li><a href="#block3" title="">OUR MOTO</a></li>
+			<li><a href="#block2" title="">PACKAGE INCLUDES</a></li>
+			<li><a href="#block4" title="">WOOCOMMERCE</a></li>
+			<li><a href="#block5" title="">INSTALLATION</a></li>
+			<li><a href="#block6" title="">HOW TO</a></li>
+			<li><a href="#block7" title="">CREDITS</a></li>
+		</ul>
+    </div>
+
+	<div class="container">
+		<div class="top-box">
+			<div class="title">
+				<h1 id="top">Lifeline—Responsive, Non-Profit, Church, Charity, NGO Premium WP Theme</h1>
+			</div>
+			<div class="meta">
+			Premium Html5 Templates and WP Themes by <a href="http://www.webinane.com/">webinane.com</a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="section">			
+				<div class="title">
+					<h2 id="block1">Introduction:</h2>
+				</div>
+				<strong>Note:</strong>
+				<h3>In case of any problem regarding Lifeline, we recommend to join our forum at <a href="http://forums.webinane.com" >Support Forum</a> or email us at support@webinane.com</h3>
+				<p>Thanks for your patience and appreciation—the premium WordPress version of the Lifeline NGO, Church, Charity and Non-Profit theme is finally out! It comes with super-responsive layout, extreme flexibility, advanced SEO coding and neat & clean design, which are the most demanded features for such a magnificent product devoted to the holy/virtuous cause. Expressive mouse-hover animations and super-refreshing retina ready graphics are pleasing to the eye and soothing to the heart.</p>
+				<p>With Lifeline premium WordPress theme you can not only launch a perfect and progressing Church, Charity and NGO website, but also save a large sum of $ 63 on account of the free-of-cost provision of Revolution Slider (worth $ 18) and Visual Composer (worth $ 28) and Layer Slider (worth $ 17). The modern page builder WP plugin makes the process of page building and customization as easy as a child’s play.</p>
+                <p>The 6 brilliant Homepage layouts, 5 innovative header styles, 15 color schemes, and plenty of built-in widgets, shortcodes & PSD files promote the versatile utilization of the product. Additional appeal is rendered to Lifeline through multi-language support, WooCommerce plugin, cross browser compatibility, and an unlimited number of Google Fonts Families and Font Awesome Icons.</p>				
+			</div>  
+            <div class="section">			
+				<div class="title">
+					<h2 id="block3">Our Motto:</h2>
+				</div>
+				<p>The sole determination of our highly skilled and devoted team workers is to bring innovation in the field of template development that will provide the users with something that they would have never experienced before. While the website designing is becoming a promising business, there are also many serious and complex issues that are being faced by the global web community. The same, otherwise disappointing, problems are being addressed here for the utmost facilitation and convenience of the clients.</p>				
+			</div>  
+
+			<div class="section">			
+				<div class="title">
+				  <h2 id="block2">The Package Includes:</h2>
+				<div>
+				
+				<div class="data">
+					<ul>
+						<li>Best for NGO and Charity websites</li>
+                        <li>WooCommerce Ready</li>
+                        <li>Sharp Retina Display</li>
+                        <li>Fifteen (15) eye-catching pre-defined color schemes</li>
+                        <li>Six (6) unique Homepage layouts and 5 catchy Header styles</li>
+                        <li>1170 pixels width</li>
+                        <li>Modern Visual Composer page builder WP plugin (save $ 28)</li>
+						<li>Revolution Slider included (Save $ 18)</li>
+						<li>Layer Slider included (Save $ 17)</li>
+                        <li>Advanced SEO Coding</li>
+                        <li>Highly responsive layout</li>
+                        <li>Easy customization with Drag & Drop facility</li>
+                        <li>Super flexibility</li>
+                        <li>Cross browser compatibility</li>
+                        <li>Built-in Social Media buttons</li>
+                        <li>Full and boxed layout</li>
+                        <li>Three Gallery pages (2 columns, 3 columns and 4 columns)</li>
+                        <li>Six (6) extra Sidebar widgets</li>
+                        <li>Flicker widget for the Footer</li>
+                        <li>Over 650 Google Fonts Families and 350+ Font Awesome Icons</li>
+                        <li>Four (4) patterns for boxed layout</li>
+                        <li>Two (2) unique “Donate Us” box designs</li>
+                        <li>Separate Pages for “Successful Stories” and “Projects”</li>
+                        <li>Four (4) Single Post styles (with Project, Video, Featured Image and Slider)</li>
+                        <li>Event Management pages included</li>
+                        <li>Support for Contact Form 7</li>
+                        <li>Sliding hover effect on menu</li>
+                        <li>Usage of light JQuery Code</li>
+                        <li>6 PSD files included in the package</li>
+                        <li>Complete and detailed Documentation</li>
+					</ul>
+				</div>				
+			</div>
+		</div>
+        
+        <div class="section">			
+				<div class="title">
+				  <h2 id="block4">WooCommerce: Initial Setup</h2>
+				</div>
+				<div id="accordion">				
+					<h2>Installation and Initial Setup</h2>					
+				<div class="section">	
+                <p>Installation is just as easy as any other WordPress plugin. You have 2 options:</p>
+                <strong>FTP/SFTP Upload</strong>
+                <ul>
+                <li>Visit the WooCommerce Plugin Page on the WordPress.org Plugin Repository and click download. This will download the latest version to your local machine.</li>
+                <li>Extract the downloaded zip file using your application of choice.</li>
+                <li>Connect to your WordPress site via FTP or SFTP (SFTP FTW!) and navigate to <code>wp-content/plugins/</code>.</li>
+                <li>Upload the extracted woocommerce folder to <code>wp-content/plugins/</code>.</li>
+                </ul>
+                <strong>WordPress Dashboard</strong>
+                <ul>
+                <li>Login to your WordPress site Dashboard.</li>
+                <li>Navigate to Plugins -> Add New.</li>
+                <li>Search for "WooCommerce".</li>
+                <li>The top result should be "WooCommerce - excelling eCommerce". Click install now.</li>
+                <li>Depending on your setup you may be prompted for your FTP username and password.</li>
+                <p><img src="https://cdn.tutsplus.com/wp/authors/willwilson/installingwoocommerce.jpg" ></p>
+                </ul>
+                <strong>Plugin Activation</strong>
+                <ul>
+                <p>If you uploaded your plugin via FTP/SFTP you now need to navigate to "Installed Plugins" under your WordPress Dashboard. Find WooCommerce in the list and click on activate.</p>
+                <p>If you downloaded the plugin via your WordPress Dashboard you should see "Successfully installed the plugin WooCommerce - excelling eCommerce 1.6.6." (The version may be different depending on when you are reading this!), underneath simply click Activate Plugin. (If you have already navigated away from this page you can simply follow the above step, navigating to your Installed Plugins page to activate.)</p>
+                </ul>
+                <p><strong>Pages Setup</strong> - You should see a nice magenta banner "Welcome to WooCommerce – You're almost ready to start selling :)". WooCommerce needs some pages to be created for it to function, it can do this automatically for you by simply clicking "Install WooCommerce Pages". (You can change these page names later if you want to).</p>
+                <p>That's it WooCommerce is installed! You should now be looking at the WooCommerce settings page. This is where you will be configuring your store. Let's go through the initial settings.</p>
+                <h3>General Settings</h3>
+                <p>The first thing we need to do is setup where we are and our currency. These are simple dropdowns and you also get a third dropdown to allow you to limit which countries you are willing to ship to. You currently can only set one currency, which might be an issue for some international sellers, however there is an extension to show dynamic currency conversions in your store using the Open Source Currency Exchange API. This will only serve as a guide for your visitors as payment will still be taken in the base currency you set under general settings. It is also a paid extension.</p>
+                <p><img src="https://cdn.tutsplus.com/wp/authors/willwilson/woocommercesettings.jpg" ></p>
+                <p>Next we get some Checkout and account options. Here you can configure things like enabling guest checkouts (so they don't need to register an account with your site), you can force SSL on checkout pages (particularly useful if your payment gateway requires this), if you want to enable coupons (more on this later). You can also set some account functions like allow user registration without an order, whether to use email addresses for usernames and if you want to hide the WordPress Admin from customers. Most of these are personal preference and you can add and remove these options whenever you like. The default options are a good place to start and I always disallow customer access to the WordPress admin.</p>
+                <p>Further down we have some options for styling and scripts. You can enable the default WooCommerce CSS and customise it from here or turn it off completely. We'll go into more detail on this later. You also get a couple of UI options including quite a nice Lightbox effect which I usually enable.</p>
+                <p>Finally on this page we see our digital downloads options. With WooCommerce you can easily sell virtual and downloadable products these options allow you to define how they should be handled and how to grant access. The options are pretty self explanatory as with most of the WooCommerce setup.</p>
+                <h3>Catalog Settings</h3>
+                <p>Most of the options are easy to understand, one definately worth a look is the "Show subcategories". These three little checkboxes can really affect your look. Check these boxes and your main store page will show your categories instead of products. This is really useful as it gives much more of a e-commerce feel, with lots of products simply having the products shown can make navigating your product categories quite difficult as you have to rely on the WooCommerce widgets.</p>
+                <p><img src="https://cdn.tutsplus.com/wp/authors/willwilson/catalogsettings.jpg" ></p>
+                <p>Product data is also one to watch, it gives you the option to show or hide some fields on your products, it is up to you to decide if you need these fields and to enable/disable according to your needs. Likewise hiding underneath is the ratings options. Again whether or not to allow product reviews is your personal choice, but it is nice that WooCommerce gives you the option to turn it on or off.</p>
+                <p>Skipping to the bottom we see the Image options. Here you set the image dimensions of your products, these are essentially the image sizes for the Products custom post type WooCommerce creates for you. Catalog images are your archive style pages with single product images and product thumbnails being exactly what they say they are. If you do change the image sizes after adding products you will need to regenerate your images using something like the Regenerate Thumbnails Plugin as like all WordPress media the extra image sizes are created on upload based on these settings.</p>
+                <h3>Other Settings</h3>
+                <p>I'm going to speed through some of the other settings here as most are fairly self-explanatory. I recommend you setup a local WordPress site and have a play with WooCommerce to check out the different options.</p>
+                <ul>
+                <li><strong>Pages Settings</strong> - Remember during our plugin activation we created some pages? Well it is here you can change them. You can simply update the already created pages (found along with all the other pages you have on your site) or you can create new pages and link them from this page. You can also change your shop permalink structure from here although I have never found the need personally.</li>
+                <li><strong>Inventory Settings</strong> - Another small and simple page. Basically do you want to enable stock management or not? If you do you get a few options on what to do about low stock etc.</li>
+                <li><strong>Tax Settings</strong> - From here you can define your tax rules with multiple tax classes and local tax rules. Particularly useful actually especially for international selling. As with all the settings you will either need it or not and switching it off is as simple as a checkbox.</li>
+                </ul>
+                <p>So hopefully we have WooCommerce installed and we've been through our intial setup. There's still a little bit of work to do before we can start adding our products though.</p>
+                <h3>Setting Up Shipping</h3>
+                <p>Out of the box WooCommerce comes with a range of shipping options and even gives you the option to switch it off completely if you are dealing with downloadable or virtual products. The core shipping options allow you to set fixed rate costs for domestic, international and local delivery and allow you to specify different classes like Next Day, Priority Delivery etc by using what are called shipping classes. You can easily set which countries and areas qualify for your different shipping methods and you should be able to get your store up and running using these basic methods.</p>
+                <p><img src="https://cdn.tutsplus.com/wp/authors/willwilson/selectingshippingmethods.jpg" ></p>
+                <p>Let's setup a shipping method. So for my store I want to charge a flat fee for all deliveries to the UK and then a flat fee for international shipping. From my shipping options I have disabled all but "Flat Rate" and "International Shipping". On my main shipping options page I have ticked "Enable Shipping" and "Hide shipping costs until an address is entered". I don't want the shipping calculator to be shown so have unticked this (this is more for use when you have complicated shipping rules and charges in place). Now I don't mind shipping to a seperate billing address so I'm allowing that, however I am setting the billing address as the default shipping address. You can see my setup below.</p>
+                <p>So now onto the charges. So firstly my flat rate; I've enabled it and changed the "Method Title" to UK Delivery (this is what is output on the front end). For my method availability I have set it to specific countries and specified United Kingdom in the box below. On people with a shipping address within the United Kingdom will be able to use this shipping method. Next I have set the "Calculation Type" to Per Order and left it as Taxable. My Default cost is set to 4.99 I'm not charging a handling fee.</p>
+                <p><img src="https://cdn.tutsplus.com/wp/authors/willwilson/ukshippingsetup.jpg" ></p>
+                <p>Now for my International Shipping. I've enabled it, the default name of "International Delivery" makes sense. Now for availablity I've this time set it to "Excluding selected countries" and then entered United Kingdom. Everything else is the same as for UK delivery except the price which I have set to 7.99. Now anybody ordering with delivery to a UK address should see the United Kingdom Delivery price and anybody with a delivery address outside the United Kigdom will see our international price.</p>
+                <p>This is obviously a very basic shipping setup. You can do much more using premium shipping extensions. You can use the Table Rate Shipping Extension to create complicated shipping rules to calculate shipping based on weight and dimensions of a product or charge a fixed fee for the first item and then a smaller fee for additional items in a cart (This extension is extremely well put together and can give you endless options for your shipping charges). You can also get extensions to hook into popular shipping carriers APIs such as UPS, FedEx and the USPS meaning you can get real-time and correct shipping pricing from your carrier. Now you pay for the extra shipping methods but the small cost involved should be well inline without whatever profits your store is generating with the average shipping extension coming in at around $49.</p>
+                <h3>Setting Up Your Payment Gateways</h3>
+                <p>Okay, initial setup is done. We have our shipping methods setup. Now we need to actually get some money from our users! As with the shipping methods you get a few basic payment gateway options out of the box. Most of them completely pointless for most e-commerce stores, things like Direct Bank Transfer, Cheque, Cash On Delivery. What you do get is PayPal which should be fine for most people starting out and Mijireh Checkout. Mijireh is payment processor that has partnered with WooCommerce hence why it is included for free. Mijireh Checkout provides a fully PCI Compliant, secure way to collect and transmit credit card data to your payment gateway while keeping you in control of the design of your site. Mijireh supports a wide variety of payment gateways: Stripe, Authorize.net, PayPal, eWay, SagePay, Braintree, PayLeap, and more. Obviously you need an account with one of the supported payment gateways and as well as the charges you will incur from your gateway you will also have to pay a $0.50 transaction fee to Mijireh. I've not used this myself as with the shipping extensions you can purchase additional payment gateway modules and prefer a small one of cost rather than a recuring charge. The choice is yours.</p>
+                <p><img src="https://cdn.tutsplus.com/wp/authors/willwilson/paymentgatewaysetup.jpg" ></p>
+                <p>For our tutorial let's start with PayPal setup. No surprise it is simple to setup! Enable it enter your PayPal email address and you done. You get a few other options you can tweak like invoice prefixing for PayPal and you can specify your PayPal page style. You can also enable or disable PayPal sandbox mode (it is enabled by default) brilliant for testing your store beofre you go live! That's it Payment gateway is probably the easiest bit of the whole setup.</p>
+                <h3>Conclusion</h3>
+                <p>So we have WooCommerce installed and our initial setup is complete, that wasn't too painful now was it? We've setup our shipping methods and also setup our payment gateways all with very little time or effort. In our second article we will go through adding some products and talk about the different product types WooCommerce offers, we'll have a look at how to style and theme WooCommerce and discuss next steps for extending WooCommerce.</p>
+								
+		</div>
+		</div>
+		</div>
+		</div>
+			<div class="section">			
+				<div class="title">
+				  <h2 id="block5">Installation Process</h2>
+				</div>
+				<div id="accordion">				
+					<h2>How to install WordPress?</h2>					
+				<div class="section">		
+					
+					   <strong>Installation Through File Manager.</strong>
+					   <ul>
+					   <li>Step 1: Login to Cpanel.</li>
+					   <li>Step 2: Click on "Mysql Database", create a new database, username and Password(click on pasword generator, copy this password at any text document and click on usepassword) adduser to Database for your WordPress installation.
+                       <li>Step 3: Find “File Manager” under “Files” section.</li>
+                       <li>Step 4: Click on “File Manager” and select your domain, double click it.</li>
+                       <li>Step 5: Locate and click on “Upload” button given in header menu. Go to “Choose File” and give path of zipped wordpress for upload it.</li>
+                       <li>Step 6: The uploaded zipped wordpress  will appear in your domain. Extract the file and move the contents  from wordpress folder to main domain directory</li>
+					   <li>Step 7:Enter your domain into url and press enter,your wordpress installation will be start now.
+                       <li>Step 8:Enter username,database name,password etc for further installation.
+					   <li>Step 9:Login to Wordpress by entering username and password.
+					   <li>Step 10:Dashboard will be open, now customiza your site.
+					  
+					   </ul>
+					    <p> <strong>Watch video here</strong> </p>
+						<p><img src="images/1.jpg" alt=""><a href="http://youtu.be/9mEqSOk6rvY"><img src="images/2.jpg"  alt=""></a></p>
+						
+					    <br />
+                         <strong>Installation Through localhost.</strong>
+						 <ul>
+						 <li>Step 1:Download the latest version of WordPress.</li>
+						 <li>Step 2:Create database using phpmyadmin interface.</li>
+						 <li>Step 3:Go to the XAMPP folder on your computer and open the htdocs folder.</li>
+						 <li>Step 4:Copy wordpress folder into it.</li>
+						 <li>Step 5:Open localhost at your browser.</li>
+						 <li>Step 6:Enter database name,username (root),password field empty and click enter.</li>
+						 <li>Step 7:Then installed the wordpress.
+						 <li>Step 8:Login to Wordpress by entering username and password.
+						 </ul>
+						  <p> <strong>Watch video here</strong></p>
+						  <p><img src="images/1.jpg" alt=""><a href="http://youtu.be/fTJrjn4nKyE"><img src="images/2.jpg" alt=""></a></p>
+						</div>
+						  <h2>Lifeline WP Theme Installation</h2>
+					  <div class="content">
+					  <p>You can install lifeline theme by following either of three ways:</p>
+					  <strong>Installation through FTP...</strong>
+					  <p>Follow these simple steps:</p>
+					  <ul>
+					  <li>Step 1: Download lifeline WP theme from themeforest.net</li>
+					  <li>Step 2: Extract the contents of the ‘lifeline theme package’ that you downloaded from themeforest.net. After extraction, you will find the contents, like Documentation, lifeline.zip file, etc.</li>
+					  <li>Step 3: Extract lifeline.zip file.</li>
+					  <li>Step 4: Connect your website through FTP client, like FileZilla.</li>
+					  <li>Step 5: Upload the extracted lifeline folder to WP-Contents/Themes.</li>
+					  <li>Step 6: Go to your WordPress Admin Panel and, under appearance section, and click on “Themes”. There you will find newly uploaded lifeline theme. Simply activate it by clicking on “Activate” button.</li>
+					  </ul>
+					  <br />
+					   <strong>Installation Through File Manager.</strong>
+					   <ul>
+					   <li>Step 1: Login to Cpanel of your hosting.</li>
+                       <li>Step 2: Find “File Manager” under “Files” section.</li>
+                       <li>Step 3: Click on “File Manager” and select your website from dropdown menu of pop-up window. Click on “Go”.</li>
+                       <li>Step 4: New window of File Manager will appear. All the uploaded files of your website will appear.</li> 
+                       <li>Step 5: Locate and click on wp-content => Themes</li>
+                       <li>Step 6: Locate and click on “Upload” button given in header menu. Go to “Choose File” and give path for zipped lifeline     folder and upload it.</li>
+                       <li>Step 7: The uploaded zipped lifeline file will appear in wp-content/themes. Extract the file and the contents will appear at the same place.</li>
+                       <li>Step 8: Go to your WordPress Admin Panel and, under appearance section, click on “Themes”. There you will find newly    uploaded lifeline theme. Simply activate it by clicking on “Activate” button.</li>
+					   </ul>
+					   <br>
+                         <strong>Installation Through WP Admin Panel</strong>
+						 <ul>
+						 <li>Step 1: Login to WordPress Admin Panel dashboard.</li>
+                         <li>Step 2: Go to “Appearance” => “Themes” => “Add New”</li>
+                         <li>Step 3: Upload zipped lifeline file and install it.</li>
+                         <li>Step 4: Activate lifeline theme by clicking on “Activate” button.</li>
+						 </ul></div>
+					<h2>How to activate a lifeline theme among many installed themes?</h2>
+						<div class="content">					
+						<ul>
+							<li>Login to WP Admin Panel Dashboard by giving Username and Password.</li>
+							<li>	Go to “Appearance => Themes” on the side menu of WP Dashboard. All the installed themes will appear on the dashboard.</li> 
+							<li>Go to lifeline theme that you want to activate and click on the option “Activate” below it. It will get activated.</li>
+						</ul>
+						<p><img src="images/top1.png" width="870" alt=""></p>
+					</div>
+					<h2>What are the plugins needed to set up the Lifeline WP theme?</h2>
+						<div class="content">
+						<p>After you install the Lifeline WP theme, a Light Box will appear asking you to install the required plugins with the option “Begin Installing Plugin”. Click on it and install the plugins “Visual Composer”, “Revolution Slider”, “Layer Slider” and “WooCommerce”. Install the plugins one by one and activate them.</p>
+					</div>					
+					<h2>How to install Lifeline Demo with a single click?</h2>
+				<div class="content">				
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” on the side menu of WP Dashboard</li>
+                        <li>Locate the option, "Import Demo Data" on the top bar of the "Theme Options" dashboard.</li>
+                        <li>Click on this option (Import Demo Data).</li>
+						<li>Scroll the page down and click on "Save All Changes".</li>
+                        </ul>
+						<p><img src="images/top2.png" width="870" alt="">
+					</div>
+					<h2>One Click Demo Installation of Lifeline Theme</h2>
+					<div class="content">					
+						<p>The piece of very good news for you is that now the Demo of Lifeline multipurpose premium WordPress theme can be installed with a single click! No hassle at all. Earlier, you were required to install the “WordPress Importer” plugin and upload the .XML file. But now all these steps have been eliminated. The installed Demo will appear the same as seen in the Live Preview on themeforest.net. If you face any problem in “One Click Demo Installation” process, you can contact the Webinane Support Team at support@webinane.com. They will install the Demo for you and assist you in every possible way totally free of cost.</p>
+				</div>	
+				 </div></div></div>
+				 <div class="section">
+				      <div class="title">
+                    <h2 id="block6">How to</h2>	
+					 <h3>Common Problems Related to Demo Installation.</h3>
+				<div id="accordion">                  
+				    <h2>What to do if Main Menu items on Header are dislocated?</h2>
+					<div class="content">					
+						<ul>
+                        <li>Go to “Appearance => Menus” on the side menu of WP Dashboard</li>						
+                         <li>Click on “Manage Locations” and go to the options “Main Menu”.</li>						
+                         <li>Go to the menu selection dropdown and select “Main Menu” and click on “Save Changes” button.</li>
+                         <li>Go to the tab “Edit Menus” and locate “Menu Settings”.</li>
+                         <li>Put a check in the check box of “Main Menu” on the bottom of the dashboard.</li>
+                         <li>Click on “Save Menu” on the bottom.</li>
+                        </ul>
+						<p><img src="images/pic8.png" alt=""></p>
+					</div>
+					<h2>What to do if Header is larger than its normal size and improperly located?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “General Settings” => “Choose Header Style”</li>
+                        <li>Click on the Radio Button of anyone of the Header Styles which you want to apply.</li>
+                        <li>Click on “Save All Changes” option, given on the bottom.</li>
+                        </ul>
+						 <p> <strong>Watch video here</strong> </p>
+						<p><img src="images/1.jpg" alt=""><a href="http://youtu.be/vkVdhOOlSzw"><img src="images/2.jpg" alt=""></a></p>
+						
+					</div>
+                    <h2>What to do if Logo is not visible?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “General Settings” => “Choose Header Style”</li>
+                        <li>Scroll the page down and locate the option of “Logo Image”.</li>
+                        <li>Click on “Browse” and a pop up window will appear.</li>
+                        <li>Upload the Logo Image from your PC by clicking on “Select Files”.</li>
+                        <li>After the image has been uploaded, scroll the page down and click on “Insert into Post”. The pop up window will disappear.</li>
+                        <li>Click on “Save All Changes” option, given on the bottom.</li>
+                        </ul>
+						
+					</div>
+					<h2>What to do if Logo is stretchy, improperly sized or looking imperfect?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “General Settings” => “Choose Header Style”</li>
+                        <li>Scroll the page down and locate the option of “Logo Size”.</li>
+                        <li>Give the width and height for Logo in the input boxes of “Logo Width” and “Logo Height”, respectively.</li>
+                        <li>Click on “Save All Changes” option, given on the bottom.</li>
+                        </ul>
+						<p><img src="images/new-2.png" width="877" alt=""></p>
+					</div>
+                    <h2>How to apply a shortcode on any section of any page?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Pages” => “All Pages” on sidebar of WP dashboard.</li>
+                        <li>On the “All Pages” dashboard, you will find a list of all the available pages in the theme.</li>
+                        <li>Click the “Edit” option of any of these pages where you want to add or replace a shortcode.</li> 
+                        <li>You will be directed to a new screen displaying the contents of that particular page in Visual Composer platform. In the VC page layout, you will find different section containing different shortcodes. </li>
+						<li>select any shortcode,new window will appear,save changes,click publish.
+                        </ul>
+					
+						<h3>Replacing a Given Shortcode with Another:</h3>
+						<ul>
+						<li>If you want to replace a given shortcode with another one, first you will have to remove it by clicking on the “Delete” icon. </li>
+						<li>After the shortcode has been removed, the given section will get empty with “+” sign in it. </li>
+						<li>Now click on “+” sign and pop-up window will appear with a list of all the available shortcodes.</li>
+						<li>Click on any of these shortcodes that you want to apply. A pop-up window will appear with different editing options. </li>
+						<li>Customize each of these options according to your requirement.</li>
+						<li>After you have customized all these options, click on “Save Changes” and the pup-up window will disappear.</li>
+						<li>Go to right sidebar on the dashboard and click on “Update” option and the shortcode will appear on the frontend of the website.</li>
+						</ul>
+						<h3>Applying a Shortcode in New Section:</h3>
+						<ul>
+						<li>Click on “+” sign in a new section usually given at the bottom. (Note: You can also take the section to any other place through ‘drag & drop’).</li>
+						<li>As you click on “+” sign, a pop-up window will appear with a list of all the available shortcodes.</li>
+						<li>Click on any of these shortcodes that you want to apply. A pop-up window will appear with different editing options for that shortcode. </li>
+						<li>Customize each of these options according to your requirement. </li>
+						<li>After you have customized all these options, click on “Save Changes” and the pup-up window will disappear.</li>
+						<li>Go to right sidebar on the dashboard and click on “Save” option and the shortcode will appear on the frontend of the website.</li>
+						</ul>
+					</div>
+					<h2>How to create new pages with built-in Lifeline theme Shortcodes?</h2>
+					<div class="content">
+					<strong>Note:</strong>
+					<p>Please create new pages while using the shortcodes that are provided with Lifeline WP theme. Do not use the default Visual Composer shortcodes to create new pages.</p>
+						<ul>
+                       <li>Go to “Pages” => “Add New”. </li>
+					   <li>As you click on “Add New”, a new widow will appear on the WP dashboard.</li>
+					   <li>Locate the “Add New Page” input box and provide title for the new Page.</li>
+					   <li>Below the title input box, you can locate the buttons, “Frontend Editor” and “Backend Editor”. Click on the “Backend Editor”, and different customization options of the Visual Composer will appear.</li>
+					   </ul>
+					   <p><img src="images/pic13.png" width="877" alt="">
+					   <ul>
+					   <li>To create a new page of your choice, click on “Add Element” button, and a pop-up window will appear.</li>
+					   </ul>
+					   <p><img src="images/pic13b.png" alt=""></p>
+					   <ul>
+					   <li>On the pop-up window, you can find a tabber located on the top. Got to the end of the tabber and locate the tab, “Lifeline”. Click on it and different shortcodes will appear that we have created. </li>
+					   </ul>
+					   <p><img src="images/pic10.png" align=""></p>
+					   <ul>
+					   <li>Now use any of these shortcodes to create a new page.</li>
+					   <li>After creating a new page with our self-created shortcodes, you can publish the page by clicking on the “Publish” (Step 7)option.</li>
+                        </ul>
+						
+						
+					</div>
+					 <h2>How to apply a pre-defined/default template page?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Pages” => “All Pages” on sidebar of WP dashboard.</li>
+                        <li>On the “Add New Page” dashboard, locate the “Template” dropdown in the sidebar widget. </li>
+                        <li>From the “Template” dropdown list, you can select any template page. These template pages are over "9" in number.</li> 
+                        <li>Go to “Sidebar” dropdown and choose an appropriate option. </li>
+						<li>Click on “Publish” option on the right sidebar of the dashboard.</li>
+                        </ul>
+						<strong>Note: </strong>
+						<p>If you want to use the same template page, that you have right now selected, as Homepage:</p>
+						<ul>
+						<li>Go to “Settings => Reading” on the side menu of WP Dashboard </li>
+						<li>Locate the option “Front Page Displays” and click on the radio button “A Static Page (select below)”.</li>
+						<li>Locate the option “Front page”.</li>
+						<li>Select the template page that you want to set as Homepage from the dropdown list.</li>
+						<li>Click on “Save Changes” given on the bottom.</li>
+						
+						</ul>
+						 <p> <strong>watch video here</strong> </p>
+						<p><img src="images/1.jpg" alt=""><a href="http://youtu.be/ZYr8z-vWyZ4"><img src="images/2.jpg" alt=""></a></p>
+							
+					</div>
+					 <h2>What to do if some of the widgets in Footer are not visible?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance” => “Widgets” on the side menu of WP Dashboard</li>
+                        <li>Go to the Footer Sidebar to the right side of the Widgets dashboard.</li>
+                        <li>Click on the “Footer Sidebar” and the widgets provided on the footer will be displayed.</li> 
+                        <li>Click on each of the available footer widgets one by one. Click on “Save” option, provided in each of the widgets, and all the widgets will be displayed in the Footer properly.</li>
+                        </ul>
+						<p> <strong>Watch video here</strong> </p>
+						<p><img src="images/1.jpg" alt=""><a href="http://youtu.be/DAD1qtaWWBI"><img src="images/2.jpg" alt=""></a></p>
+					</div>
+					<h2>What to do if carousel of the “Recent News” section is not working?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Pages” => “All Pages” => “Home”</li>
+                         <li>Click on the “Edit” option given below “Home”.</li>
+                         <li>Click on the “Edit” option of the “Recent News” section. A light box will appear for editing the “Recent News” section.</li>
+                         <li>Scroll down the page of the Light Box to locate the “Number” option. Here enter the number of posts, provided in this section, which should be at least 4 or more.</li>
+                         <li>Click on the “Save” option, and the light box will disappear.</li>
+                         <li>Click on “Update” option to update the page.</li>
+                        </ul>
+                        <strong>Note:</strong>
+                        <p>If you keep the number of posts 3 or less, the carousel in the section of “Recent News” will not work. So, for the carousel to work, the number of posts should be at least 4 or more than that.</p>
+					</div>
+                    <h2>What to do if the images in the “Recent News” section are stretchy, or are looking inappropriate?</h2>
+					<div class="content">
+						<p>If you are encountering the problem of stretchy or imbalanced or improper image in the “Recent News” section, it might be because of the inappropriate size of the image being uploaded. So, please ensure that the size of the image you are uploading in the “Recent News” section must be 570x388 (width and height) in pixels.</p>
+					</div>
+					<h2>What to do if Font Awesome Icons are not visible in “Our Welfare Projects” section?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Projects” => “All Projects” on the side menu of WP Dashboard. List of all the projects in the “Our Welfare Projects” section will be displayed on the “All Projects” Dashboard.</li>
+                        <li>Click on the “Edit” option given below the name of the project whose Font Awesome icon is not visible in the “Our Welfare Projects” section.</li>
+                        <li>Scroll the page down and go to the “Display Settings”.</li>
+                        <li>Click on the “Service Icon” dropdown. A dropdown list will appear. Click on any of the Font Awesome Icon’s name which you want to apply to that particular project.</li>
+                        <li>Click on “Update” option to update the page.</li>
+                        </ul>
+					</div>
+                    </div>
+                    <h3>Other HOW TOs</h3>	
+				<div id="accordion">
+                    <h2>How to set the Main Menu on Header?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance => Menus” on the side menu of WP Dashboard</li>
+                        <li>Go to the menu selection dropdown and select “Main Menu” and click on “Save Menu” option on the top.</li>
+                        <li>Put a check in the check box of “Main Menu” on the bottom.</li>
+                        <li>Click on “Save Menu” on the bottom.</li>
+                        </ul>
+						<p><img src="images/new.png" alt=""></p>
+					</div>
+					
+                    <h2>How to change color schemes of the Lifeline WP theme?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “General Settings”</li>
+                        <li>Locate the option “Theme Color Scheme” and click on the Radio Button of “Predefined Color Scheme”</li>
+                        <li>Go to the dropdown can select any of the available pre-defined color schemes.</li>
+                        <li>Click on “Save All Changes” option, given on the bottom.</li>
+                        </ul>
+						<p> <strong>Watch video here</strong> </p>
+						<p><img src="images/1.jpg" alt=""><a href="http://youtu.be/HMXVzlqzLPg"><img src="images/2.jpg" alt=""></a></p>
+						
+					</div>
+					<h2>How to change Heading Font Family of the Lifeline WP theme?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “Font Options” => “Heading Fonts”</li>
+                        <li>Select the required Heading Font Family from the dropdown list for any of the 6 built-in Heading Typography styles, i.e. H1, H2 … H6.</li>
+                        <li>Click on “Save All Changes” option, given on the bottom.</li>
+                        </ul>
+                        <strong>Note:</strong>
+                        <p>It is not necessary that you choose same Font Family for all the Heading Typography styles, i.e. H1, H2 … H6. You can choose the Font Family of your own choice for any of these options.</p>
+					</div>
+                    <h2>How to change Body Font Family of the Lifeline WP theme?</h2>
+					<div class="content">
+						<ul>
+                       <li>Go to “Appearance" => "Theme Options” => “Font Options” => “Body Fonts”</li>
+                        <li>Select the required Body Font Family from the dropdown list for “Body Font Options”, Grey Area Typography” and “Footer Options”.</li>
+                        <li>Click on “Save All Changes” option, given on the bottom.</li>
+                        <strong>Note:</strong> 
+                        <p>It is not necessary that you choose same Font Family for all the Body Fonts, i.e. “Body Font Options”, Grey Area Typography” and “Footer Options”. You can choose the Font Family of your own choice for any of these options.</p>
+                        </ul>
+						<p> <strong>Watch video here</strong> </p>
+						<p><img src="images/1.jpg" alt=""><a href="http://youtu.be/QZSQYJvWhGA"><img src="images/2.jpg" alt=""></a></p>
+						
+						</div>
+					<h2>How to show/hide (make visible/invisible) “Donate Us” box?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Pages” => “All Pages” => “Home”</li>
+                        <li>Click on the “Edit” option given below “Home”.</li>
+                        <li>Click on the “Edit” option of the “Our Causes” section. A light box will appear for editing the “Our Causes” section.</li>
+                        <li>Scroll down the page of the Light Box to locate the “Donation Section”.</li>
+                        <li>Click on the dropdown of the “Donation Section” and select “True” or “False” to show or hide (add or remove) the Donate Us box from the Homepage, respectively.</li>
+                        <li>Click on the “Save” option, and the light box will disappear.</li>
+                        <li>Click on “Update” option to update the page.</li>
+                        </ul>
+                        <strong>Note:</strong>
+                       <p> i.	If you show the “Donate Us” box on the Homepage, 3 posts of the “Our Causes” section will be displayed. However, if you remove the “Donate Us” box, 4 posts of the “Our Causes” section will be shown.</p>
+                         <p>ii.	So, in case you remove the Donate Us box, provide at least 4 posts in the Our Causes section for proper full-width display.</p>
+                         <p>iii.	Moreover, for the “Our Causes Carousel” to work in the absence of Donate Us box, you need to provide at least 5 posts.</p>
+						 <p><img src="images/pic14.png"  width="870" alt=""></p>
+					</div>
+                    <h2>How to add values in the “Donate Us” box?</h2>
+					<div class="content">
+						<ul>
+                       <li>Go to “Appearance" => "Theme Options” => “Donation Settings” => “Donation Settings (sub-menu)”</li>
+                        <li>Edit the donation options, like Title, PayPal Type, Currency Symbol, Amount Raised, Target Amount, and so on.</li>
+                        <li>Click on “Save All Changes” option, given on the bottom.</li>
+                        </ul>
+						<p> <strong>Watch video here</strong> </p>
+						<p><img src="images/1.jpg" alt=""><a href="http://youtu.be/37IRw6WXgTE"><img src="images/2.jpg" alt=""></a></p>
+						
+						</div>
+					<h2>How to add the ‘cursor hover’ values on Font Awesome Icons of “Our Welfare Projects” section?</h2>
+					<div class="content">
+						<ul>
+                       <li>Go to “Projects” => “All Projects” on the side menu of WP Dashboard. List of all the projects in the “Our Welfare Projects” section will be displayed on the “All Projects” Dashboard.</li>
+                        <li>Click on the “Edit” option given below the name of the project where you want to add ‘cursor hover’ values on the Font Awesome Icon. These values appear as you bring cursor over the project’s icon.</li>
+                        <li>Scroll the page down and go to the “Amount Information”. Click on it to open the options box.</li>
+                        <li>Put in the “Currency Symbol”, “Spent Amount” and “Amount Needed” in the input boxes of the respective option.</li>
+                        <li>Click on “Update” option to update the page.</li>
+                        </ul>
+						<p><img src="images/pic16.png" alt=""></p>
+					</div>
+                    <h2>How to set the Main Menu on Footer?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance => Menus” on the side menu of WP Dashboard</li>
+                        <li>Go to the menu selection dropdown and select “Footer Menu” and click on “Save Menu” option on the top.</li>
+                        <li>Put a check in the check box of “Footer Menu” on the bottom.</li>
+                        <li>Click on “Save Menu” on the bottom.</li>
+                        </ul>
+						<p><img src="images/pic12.png" alt=""></p>
+					</div>
+                    <h2>How to make visible/invisible the widgets area on the Footer section?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “General Settings” => “Footer Settings”</li>
+                        <li>Turn the Footer on/off from the On/Off Switch.</li>
+                        <li>Click on “Save All Changes” option given on the bottom.</li>
+                        </ul>
+                        <strong>Note:</strong>
+                        <p>Turning the Switch On/Off will make visible/invisible only the widgets area of the Footer section. The part of the Footer section, below the widgets area, will always be visible.</p>
+						<p> <img src="images/pic17.png" width="870" alt=""></p>
+					
+                    <h3>How to change the Footer background?</h3>
+					
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “General Settings” => “Footer Settings”</li>
+                        <li>Locate the option, “Footer Background” and click on “Browse”</li>
+                        <li>Click on “Select Image” and choose image from your PC.</li>
+                        <li>Click on “Save All Changes” option given on the bottom.</li>
+                        </ul>
+					</div>
+                    <h2>How to add more Widgets in the Footer?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance” => “Widgets” on the side menu of WP Dashboard</li>
+                        <li>Locate the “Footer Sidebar” on the right side of the WP Dashboard.</li>
+                        <li>Select widgets from the “Available Widgets” area and add them on the “Footer Sidebar”.</li>
+                        </ul>
+						<p><img src="images/pic6.jpg" alt=""></p>
+					</div>
+                    <h2>How to apply any of the 5 available Header Styles?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “General Settings” => “Choose Header Style”</li>
+                        <li>Click on the Radio Button of anyone of the Header Styles which you want to apply.</li>
+                        <li>Click on “Save All Changes” option, given on the bottom.</li>
+                        </ul>
+						<p><img src="images/pic15.png" width="870" alt=""></p>
+					</div>
+                    <h2>How to display general information (Address, Ph. No. & Email ID) on Top Bar?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “General Settings” => “Top Bar Settings”</li>
+                        <li>Give information in the input boxes of “Address”, “Phone Number” and “Email Address”.</li>
+                        <li>Click on “Save All Changes” option, given on the bottom.</li>
+                        </ul>
+						<p> <strong>Watch video here</strong> </p>
+						<p><img src="images/1.jpg" alt=""><a href="http://youtu.be/IIEFZxrWyk0"><img src="images/2.jpg" alt=""></a></p>
+					</div>
+                    <h2>How to set Favicon icon?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “General Settings” => “Choose Header Style”</li>
+<li>Locate “Logo Settings” and go to the “Favicon” option.</li>
+<li>Click on “Browse” and upload image from your PC.</li>
+<li>Click on “Save All Changes” option, given on the bottom.</li>
+                        </ul>
+						<p><img src="images/pic4.jpg" alt=""></p>
+					</div>
+                    <h2>How to set logo text and logo font?</h2>
+					<div class="content">
+						<ul>
+                       <li>Go to “Appearance" => "Theme Options” => “General Settings” => “Choose Header Style”</li>
+                        <li>Locate “Logo Settings”.</li>
+                        <li>Go to the option of “Use Logo Text”, and switch it on.</li>
+                        <li>Enter text for the logo in the space provided for the purpose.</li>
+                        <li>Choose color for the Logo Text from the color picker.</li>
+                        <li>Select the Font Family and Font Style.</li>
+                        <li>Click on “Save All Changes” option, given on the bottom.</li>
+                        </ul>
+						<p><img src="images/pic5.png" width="877" alt=""></p>
+					</div>
+                    <h2>How to remove a section from any page through Visual Composer?</h2>
+					<div class="content">
+						<ul>
+                       <li>Go to “Pages” => “All Pages” on the side menu of WP Dashboard. All the available pages will be shown in the form of a list.</li>
+                        <li>Click on the “Edit” option of any of the available pages from where you want to remove a section.</li>
+                        <li>All the sections present on a particular page are displayed. In order to remove any of these sections, just delete it by clicking on “x” option.</li>
+                        <li>Click on the “Update” option and the given section will be removed from that page.</li>
+                        </ul>
+					</div>
+                    <h2>How can I make visible the contents of an empty section on my page?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Pages” => “All Pages” on the side menu of WP Dashboard. All the available pages will be shown in the form of a list.</li>
+                        <li>Click on the “Edit” option of any of the available pages where you have problem with the visibility of the contents of a particular section.</li>
+                        <li>Click on the “Edit” option of the section and a pop-up window will appear.</li>
+                        <li>Select a category from the “Category” dropdown.</li>
+                        <li>Click on “Save” and then update the page.</li>
+                        </ul>
+					</div>
+                    <h2>How to set spacing from the top and bottom of any section?</h2>
+					<div class="content">
+						<ul>
+                       <li>Go to “Pages” => “All Pages” on the side menu of WP Dashboard. All the available pages will be shown in the form of a list.</li>
+                        <li>Click on the “Edit” option of any of the available pages where you want to set the top and bottom margins.</li>
+                        <li>Click on the “Edit” option of any of the available sections of the given page for which you want to set the top and bottom spacing.</li>
+                        <li>As you click on the “Edit” option of any section, a pop-up window will appear.</li>
+                        <li>Here you can locate the option of “Margins” with check boxes for “Top Margin” and “Bottom Margin”. Check either one or both of the check boxes.</li>
+                        <li>Click on “Save” and then update the page.</li>
+                        </ul>
+                        <strong>Note: </strong>
+                            <p>i.	If you want to give margin only on the top of a section, put a check mark only in the check box of “Top Margin.</p>
+                            <p>ii.	For giving spacing on the bottom of a section, put a check in the “Bottom Margin” check box.</p>
+                            <p>iii.	You can also check both the boxes to give spacing on the top as well as bottom of a section.</p>
+					</div>
+                   
+                    <h2>How to choose left or right sidebar position?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “Sidebar Options”</li>
+                        <li>Locate the option of “Sidebar Position”. Choose the position of sidebar on the page by putting a check in the “Left” or “Right” radio button.</li>
+                        <li>Click on “Save All Changes” option given on the bottom.</li>
+                        </ul>
+                        <strong>Note:</strong>
+                        <p>You can use this option of “Sidebar Position” only on the pages where sidebar is present.</p>
+						<p> <img src="images/pic7.jpg" alt=""></p>
+					</div>
+                    <h2>How to create sidebar?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “Sidebar Options”
+                        <li>Locate the option of “Sidebar Creator”.</li>
+                        <li>Click on “Add More” option, and give a name for the sidebar. A new sidebar will be added.</li>
+                        <li>Click on “Save All Changes” option given on the bottom.</li>
+                        </ul>
+						<p><img src="images/pi19.png" width="870" alt=""></p>
+                        <strong>Note:</strong>
+                        <p>i.	Besides creating a new sidebar, you can also remove any of the existing sidebars by clicking on the “Remove” option.</p>
+                        <p>ii.	As you create a new sidebar, it can be viewed on the Widgets Dashboard (Appearance => Widgets) to the right side.</p>
+                        <p>iii.	If you want to add widgets in the newly created sidebar, just go to “Appearance => Widgets” and add widgets by drag and drop method.</p>
+                        <p>iv.	You can use sidebar only on the Page Templates which have built-in support for sidebar, e.g. Events Page, and so on.</p>
+                        <p>v.	To show a newly created sidebar on a particular sidebar-supporting page, go to the “Edit” option of that page. Apply it by clicking on the name of the sidebar from the sidebar dropdown list.</p> 
+                        <p>vi.	These sidebars do not work on the default pages.</p>
+					</div>
+                    <h2>How to customize the 404 Page and set 404 Page Background Image?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “Page Settings”</li>
+                        <li>Locate the option of “404 Page Image” and click on “Browse” button. A pop up window will appear where you can upload an image from your PC by clicking on “Select Files”.</li>
+                        <li>After the image has been uploaded, scroll the page down and click on “Insert into Post” button. The pop up window will disappear and you will be back on the “Page Settings” dashboard.</li>
+                        <li>Give “404 Page Heading”, “404 Page Sub Heading”, “404 Page Colored Main Title”, “404 Page Sub Title”, “404 Page Content Heading” and “404 Page Content” in the respective input boxes.</li>
+                        <li>According to your requirement, switch the “Page Comments Status” on or off from the “On/Off Button”.</li>
+                        <li>Click on “Save All Changes” option given on the bottom.</li>
+                        </ul>
+						<p><img src="images/pic20.png" width="870" alt=""></p>
+					</div>
+                   
+                    <h2>How to select Wide or Boxed Layout for a page?</h2>
+					<div class="content">
+						<ul>
+                       <li>Go to “Appearance" => "Theme Options” => “Layout Settings”</li>
+                        <li>Locate the option of “Use Boxed Layout” and switch it on or off according to your requirement.</li>                       
+                        <li>You can also adjust width for the boxed layout from the option “Theme Layout Width” dropdown.</li>
+                        <li>Click on “Save All Changes” option given on the bottom.</li>
+                        </ul>
+						<p><img src="images/pic 21.png" width="877" alt=""></p>
+					</div>
+                    <h2>How to choose from Predefined Pattern Backgrounds or upload your own “Pattern Image” for Boxed Layout?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “Layout Settings”</li>
+                        <li>Locate the option of “Predefined Patterns” and select any one of the predefined backgrounds from the dropdown list.</li>
+                        <li>If you want to apply an image of your own choice, just go to “Pattern Image” and upload an image by clicking on the “Browse” option. A pop up window will appear where you can upload an image from your PC by clicking on “Select Files”. After the image has been uploaded, scroll the page down and click on “Insert into Post” button. The pop up window will disappear and you will be back on the “Layout Settings” dashboard.</li>
+                        <li>Click on “Save All Changes” option given on the bottom. You are done now.</li>
+                        </ul>
+						<p><img src="images/pic22.png" width="877" alt=""></p>
+					</div>
+                    <h2>How to add/remove images in Countries Carousel?</h2>
+					<div class="content">
+						<ul>
+                        <li>Go to “Appearance" => "Theme Options” => “Contact Page Options” => “Countries Slider”
+                        <li>Locate the option of “Add Countries”.</li>
+                        <li>For adding more images, scroll the page down and click on “Add More”. A new row will be added where you can upload image by clicking on “Browse”. A pop up window will appear. Click on “Select Files” and choose image file from your PC. After uploading the image, scroll the page down and click on “Insert into Post” option. The pop up window will disappear, and you will be back on the “Countries Slider” Dashboard.</li>
+                        <li>For removing any of the present images, click on “Remove Upload” and the given image will be removed.</li>
+                        <li>After you are done with adding/removing images, click on “Save All Changes” option given on the bottom.</li>
+                        </ul>
+						<p><img src="images/pic23.jpg" width="877" alt=""></p>
+					</div>
+            <h2>How to create a new Layer Slider and add/customize slides?</h2>
+					<div class="content">
+						<ul>
+								<li> Go to “Layer Slider WP” => “All Sliders” and Layer Slider dashboard will appear to the right.</li>
+								<li>To create a new slider, locate and click on the option “Add New”. A new window will appear.</li>
+								<li> Provide the name for the new slider in the given input box.</li>
+								<li>Go to bottom of the page and click on the options “Save Changes”. A new dashboard page will appear.</li>
+								<li>Locate and click on the option, “Add New Slide”, and a new slide will be created.</li>
+								<li>On the newly created slide, you will see a number of customization options. You can easily customize each of these options according to your requirement.</li>
+								<li>Click on “Save Changes” option given on the bottom.</li>
+                        </ul>
+						
+					</div>
+					<h2>How to show a newly-created category in the Main Menu?</h2>
+					<div class="content">
+						<ul>
+								<li>Go to “Appearance” => “Menus”. “Menus” dashboard will appear to the right.</li>
+								<li>To the left of the “Menus” dashboard, you will find an Accordion Widget. In this widget, locate the option “Categories” and click on it. A “Categories” box will appear. </li>
+								<li>In the “Categories” box, there will appear all the categories that you might have created. </li>
+								<li>Put a check in the desired category that you want to show in the Main Menu and then click on the “Add to Menu” button given in the bottom of the “Categories” box. </li>
+								<li>As you click on the “Add to Menu” button, the given category will appear on the Main Menu items section to the right. Here you adjust the position of the category on the Main Menu through drag & drop method. </li>
+								<li>Now scroll the page down and click on the option “Save Changes” given in the bottom.</li>
+                        </ul>
+						<p><img  src="images/24.png" width="877" alt=""></p>
+					</div>
+					<h2>How to add a Custom Link to Main Menu?</h2>
+					<div class="content">
+						<ul>
+								<li>Go to “Appearance” => “Menus”. “Menus” dashboard will appear to the right.</li>
+								<li>To the left of the “Menus” dashboard, you will find an Accordion Widget. In this widget, locate the option “Links” and click on it. A “Links” box will appear.</li>
+								<li>In the “Links” box, there will appear two options, namely, “URL” and “Link Text”.</li>
+								<li>In the “URL” input box, you can provide the link of either of the same domain or another domain.</li>
+								<li>Enter text in the “Link Text” input box according to your requirement.</li>
+								<li>Click on the “Add to Menu” button given in the bottom of the “Links” box.</li>
+								<li>As you click on the “Add to Menu” button, the given Custom Link will appear on the Main Menu items section to the right. Here you adjust the position of that Custom Link on the Main Menu through drag & drop method.</li>
+								<li>Now scroll the page down and click on the option “Save Changes” given in the bottom.</li>
+                        </ul>
+						<p><img src="images/25.png" width="877" alt=""></p>
+					</div>
+					<h2>How to show a newly-created page on the Main Menu?</h2>
+					<div class="content">
+						<ul>
+								<li>Go to “Appearance” => “Menus”. “Menus” dashboard will appear to the right.</li>
+								<li>To the left of the “Menus” dashboard, you will find an Accordion Widget. In this widget, locate the option “Pages” and click on it. A “Pages” box will appear. </li>
+								<li>In the “Pages” box, there will appear all the pages that you might have created.</li>
+								<li>Put a check in the check box of desired page that you want to show in the Main Menu and then click on the “Add to Menu” button given in the bottom of the “Pages” box.</li>
+								<li>As you click on the “Add to Menu” button, the given page will appear on the Main Menu items section to the right. Here you adjust the position of that page on the Main Menu through drag & drop method.</li>
+								<li>Now scroll the page down and click on the option “Save Changes” given in the bottom.</li>
+                        </ul>
+					<p><img src="images/26.png" width="877" alt=""></p>
+		    </div>
+					<h2>Apply the “Header Background image” in every “page”.</h2>
+					<div class="content">
+						<ul>
+								<li>Click on the “Edit” option of the available “Pages”. Your want to show “Header background image”.</li>
+								<li>Scroll the page down and locate the option “Header Setting”.</li>
+								<li>Locate the option “Show Header”.</li>
+								<li>Click on the radio button “True”.</li>
+								<li>Locate the option “Top Image”.</li>
+								<li>Click on “Browse” button a pop up window will appear</li>
+								<li>Click on “Upload Files” to upload images from your PC </li>
+								<li>Choose the option “Upload to This Post” </li>
+								<li>Click on “Insert into Post”</li>
+								<li>Locate the option on right side “Publish/Update”.</li>
+                        </ul>
+						<p><img src="images/pic18.png" alt=""></p>
+						 				
+						 </div>
+						 
+					<h2>How to show more than 6 six posts on a webpage?</h2>
+					<div class="content">
+						<ul>
+                       <li>Go to “Settings => Reading” on the side menu of WP Dashboard. “Reading Settings” dashboard will appear to the right.</li>
+					   <li>Locate the option “Blog pages show at most”.</li>
+					   <li>Change the number of blog posts according to your requirement.</li>
+					   <li>Click “Save Changes” on bottom.</li>
+                        </ul>
+						 <strong>Note:</strong> 
+                       <p>By default, there can be shown 6 posts on a single webpage. You can either decrease or increase the number of posts for a page according to your requirement.</p>
+					   <p><img src="images/pic2.jpg" width="883" alt=""></p>
+					</div>
+					<h2>What to do if you are unable to install the demo and all the other things yourself?</h2>
+					<div class="content">
+						<p>If you feel any difficulty in the installation of WordPress, Lifeline WP theme, Lifeline Demo and Premium WP plugins, there is no need to worry—just contact Webinane Support Team at support@webinane.com.</p>
+					</div>
+					
+				</div>
+								
+			</div>
+
+			<div class="section">			
+				<div class="title">
+				  <h2 id="block7">Credits</h2>
+				</div>
+				<p>The credit for the development of this Lifeline—Responsive, Non-Profit, Church, Charity, NGO Premium WP Theme goes to:</p>
+				<ul>
+					<li>Google Fonts</li>
+					<li>Developers of Javascript files which have been utilized herein. </li>
+					<li>Team of Webinane.com</li>
+					<li>iv.	We are also thankful to the developers/designers of following products:
+						<ul>
+							<li>Font Awesome Icons: http://fortawesome.github.io/Font-Awesome/icons/</li>
+							<li>Intro : http://usablica.github.io/intro.js/</li>
+							<li>Elements : http://codepen.io/</li>
+							<li>Easy Pie Chart http://rendro.github.io/easy-pie-chart/</li>
+							<li>Tigra Calendar: http://www.softcomplex.com/products/tigra_calendar/</li>
+							<li>Line & Bar Chart Mini: omnipotent.net/jquery.sparkline/#s-about</li>
+							<li>Line & Bar Chart: http://designmodo.com/create-interactive-graph-css3-jquery/</li>
+							<li>Google Chart: https://developers.google.com/chart/</li>
+							<li>Full Event Calendar: http://arshaw.com/fullcalendar/</li>
+							<li>Custom Scrollbar: http://manos.malihu.gr/</li>
+							<li>Range Slider: http://ionden.com/a/plugins/ion.rangeSlider/</li>
+							<li>	Wizard From : http://www.dynamicdrive.com/ </li>
+							<li>	Bootstrap : http://getbootstrap.com/ </li>
+
+							
+							
+						</ul>
+					</li>
+				</ul>
+			  </div>
+			</div>
+	</div>
+
+
+		
+  
+</body>
+</html>
